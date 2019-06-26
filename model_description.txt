@@ -1,0 +1,28 @@
+<h1>The model</h1>
+<p>The implemented model, which was developed by R. White and G. Engelen (1993), simulates urban land use over time using cellular automata. The specifications of the model are given below.</p>
+<ul>
+<li>The model consists of a grid of cells, where the state of a cell represents a type of land use. The possible states of the cells are vacant (V), housing (H), industrial (I) and commercial (C).<!--en eventueel river (R)--></li>
+<li>At each iteration the growth rate determines the number of cells that will be converted to another state. <!--The growth rate is set to ???? --> The ratio in which cells are transformed to commerce, industry and housing is 1:4:7.</li>
+<li>A cell's neighbourhood is the set of cells within a circle with a specified radius. <!--In this model a radius of ???? is used. --></li>
+<li>A hierarchal order is applied to the different states. This order is as follows: vacant (lowest state), housing, industry and commerce (highest state). A cell is allowed to change from a lower state to a higher state, but not the other way around.</li>
+<li>At each iteration in the simulation, the transition potentials for all transitions allowed by the hierarchy are calculated using the following formula:
+<table border="0" cellspacing="0" align="center">
+<tbody>
+<tr>
+<td align="center" nowrap="nowrap"><em>P<sub>i,j</sub></em>=<em>S</em>(1+</td>
+<td align="center" nowrap="nowrap"><!--UB--><span style="font-family: symbol;">&aring;</span><em><sub>h,k,d</sub>m<sub>k,d</sub>I<sub>h,d</sub></em>)</td>
+</tr>
+</tbody>
+</table>
+where <em>P<sub>i,j</sub></em> is the transition potential from state <em>i</em> to state <em>j</em>; <br /> <em>m<sub>k,d</sub></em> is the weighting parameter assigned to cells in state <em>k</em> in distance zone <em>d</em>; <br /> <em>h</em> is the index of cells within a given distance zone; <br /> <em>I<sub>h,d</sub></em> is equal to 1 if the state of cell <em>h = k</em>, otherwise it equals 0; <br /> <em>S</em> is a stochastic disturbance term and is given by:
+<table border="0" cellspacing="0" align="center">
+<tbody>
+<tr>
+<td align="center" nowrap="nowrap"><em>S</em>=1+(<span style="font-family: symbol;">-</span>ln<em>R</em>)<sup><span style="font-family: symbol;">a</span></sup></td>
+<td align="center" nowrap="nowrap">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+Here <em>R</em> is a random number between 0 and 1. The parameter <em>&alpha;</em> determines the size of the stochastic perturbation.</li>
+<li>The transition potentials are used to determine which cells are transformed to other states. At each iteration, the cells having the highest transition potentials for a certain state will be converted to that state. However, if a certain cell belongs to the group of cells with the highest transition potentials for more than one state, then it is stochastically determined which transition takes place. In compensation, a cell having a lower transition potential will be converted to the other state, so that the correct number of transformations occur.</li>
+</ul>

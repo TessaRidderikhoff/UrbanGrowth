@@ -1,0 +1,11 @@
+<h1>Fractal dimension</h1>
+<p>The fractal dimension is a measure for the degree of complexity. It is the ratio of the change in detail in a pattern to the change in scale. It can be estimated using the following equation:</p>
+<table border="0" cellspacing="0" align="center">
+<tbody>
+<tr>
+<td align="center" nowrap="nowrap">lg<em>B<sub>t</sub></em>=<em>c+D</em>lg<em>r</em></td>
+</tr>
+</tbody>
+</table>
+<p>In this equation&nbsp;<em>D</em> is the fractal dimension, <em>c</em> a constant and <em>B<sub>t</sub> </em>is the total number of occupied cells within an area with a radius <em>r</em>. To determine the fractal dimension of a city, the total urbanized area within a given radius of the centre is calculated for several radii of increasing length. Then, regression analysis can be applied. The slope of the fitted linear line plot is equal to the fractal dimension.</p>
+<p>The fractal dimensions have been estimated for several cities. Values around 1.7 were found (Anas et al, 1998).</p>
