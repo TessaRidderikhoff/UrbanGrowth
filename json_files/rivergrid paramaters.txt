@@ -1,0 +1,4 @@
+steps 25
+a 2
+neighbours 2 
+gridsize 50 x 50
