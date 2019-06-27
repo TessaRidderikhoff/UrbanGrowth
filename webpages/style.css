@@ -1,13 +1,44 @@
 body {
-  background-color: #e6e6ff;
+  background-image: url("amst-sat.jpg");
 }
 
 h1 {
   color: white;
-  text-align: center;
+  font-family: calibri;
+  /*text-align: center;*/
 }
 
 p {
   font-family: calibri;
   font-size: 15px;
+}
+
+ul {
+  font-family: calibri;
+  font-size: 15px;
+}
+
+.jumbotron {
+	text-align: center;
+	color: black;
+	background-color: white;
+	/*max-width: 1000px;*/
+  /*background-image: url("amst-sat.jpg");*/
+  background-size: cover;
+  opacity: 0.7;
+}
+
+#maintext {
+	max-width: 1100px;
+	background-color: #e6e6ff;
+}
+
+.list-inline {
+	/*text-align: center;*/
+	color: black;
+	font-size: 20px;
+}
+
+a {
+	color: green;
 }
