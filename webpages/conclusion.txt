@@ -1,0 +1,16 @@
+<html>
+<head>
+</head>
+<body>
+<h1>Conclusion</h1>
+<ul>
+<li>Cellular automata can be used to simulate the spatial structure of urban land use over time.</li>
+<li>Fractal structures are observed for the urbanized area.&nbsp;</li>
+<li>Fractal dimensions found in the model were in agreement with fractal dimensions in the real world.</li>
+<li>By varying &alpha; the randomness and the formation of clusters in the model can be controlled.</li>
+<li>Local interactions are mostly sufficient for emergent behaviour. Smaller neighbourhood sizes than initially expected were sufficient.</li>
+<li>The city size distribution follows a power law distribution.</li>
+<li>The model can be extended, for example by adding a river.</li>
+</ul>
+</body>  
+</html>
