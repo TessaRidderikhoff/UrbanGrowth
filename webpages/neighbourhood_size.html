@@ -3,20 +3,12 @@
 </head>
 <body>
   
-  
-<p><strong>Alpha parameter exper</strong><strong>iment</strong></p>
-<p>&nbsp;</p>
-<p>Alpha determens if there is randomness in the model. This means that a cell that does not have the highest potential can still be selected to change. In this way randomness comes into the model.</p>
-<p>When alpha is for example 0 there is no randomness in the model. There are only large blocks with the same kind. When apha grows, cells that have less potential to change also get a chance to change. So the higher alpha is, the more random spots appear in the landscape.</p>
-<p>&nbsp;</p>
-<p>apha.tests.PNG</p>
-<p>GRAFIEK ALPHA OVER TIJD MET FRACTIAL DIMENSION.</p>
-<p>&nbsp;</p>
-<p>What is striking in the graph is that when alpha is very small (0 - 0.5), a large fractal dimension is immediately visible (~ 1.5). This dimension hardly grows when time steps are taken. If alpha is larger (1 or&gt; 1), there is a very low fractal dimension (~ 0.7) at the start and this grows over time, the curve is logaritmic. This is understandable because when alpha gets bigger there is more randomness and this is not favorable for a large fractal growth.</p>
-<p>&nbsp;</p>
-
 <h1>Varying the neighbourhood size</h1>
 <p>The size of the neighbourhood has been varied. When all the cells have no neighbours, all the transition potentials are zero and thus the result is completely random. However, applying a neighbourhood with a radius of 1 cell, results in the formation of clusters of urban activity. The size of the clusters increases with increasing neighbourhood size.</p>
-<p><img width = "539px" height = "334px" src="Image_size_neighbourhood.jpg" alt="Cellular cities after 40 iterations with different neighbourhood sizes (&alpha;=1.5, growth rate = 5%). From the upper left to the lower right the radius of the neighbourhood increases from 1 cell to 6 cells." /></p>
+<p><img width = "539px" height = "334px" src="Image_size_neighbourhood.jpg" alt="Fig. 1: Cellular cities after 40 iterations with different neighbourhood sizes (&alpha;=1.5, growth rate=2%). From the upper left to the lower right the radius of the neighbourhood increases from 1 cell to 6 cells." /></p>
+<p>Figure 2 depicts the fractal dimensions of the simulated cities after 25 iterations for runs using different neighbourhood sizes. It can be seen that the fractal dimension is around a value of 2.0 when there are no neighbours, which indicates randomness. The fractal dimension is approximately between 1.8 and 1.9 for a city that is computed with a neighbourhood that has a radius of 1 cell. Furthermore, the fractal dimension is around 1.7 when the neigbhourhood size has a radius of 2 or more, which is in agreement with the average fractal dimension of real cities. </p>
+<p> <img src="neighboursfractals.png" alt="Fig. 2: Fractal dimensions for simulations using different neighbourhood sizes after 25 iterations (&alpha;=1.5, growth rate =2%, gridsize=50x50). The fractal dimensions are averages of 5 runs."></p>
 </body>
 </html>
+
+  
