@@ -1,14 +1,14 @@
-$.getJSON("gridx11x100.json", function(json) {
+$.getJSON("gridx100.json", function(json) {
     console.log(Object.keys(json).length)
 
     datalen = 100
-    ss = 8
+    ss = 4
     sx = 50
     sy = 50
 
     marge = 20
 
-    legendax = sx + 200 *ss + marge
+    legendax = sx + datalen *ss + marge
 
 
     var margin = {
@@ -17,15 +17,17 @@ $.getJSON("gridx11x100.json", function(json) {
     bottom: 30,
     left: 40
 },
-width = 960 - margin.left - margin.right,
-height = 500 - margin.top - margin.bottom;
+width = 500 - margin.left - margin.right,
+height = 300 - margin.top - margin.bottom;
 
 padding = 50
 
     var svg = d3.select("#scatter").append("svg")
-        .attr("id","scatsvg")
         .attr("width", width)
-        .attr("height", height);
+        .attr("height", height+100)
+        .append("g")
+        .attr("transform", "translate(30,60)")
+            .attr("id","scatsvg");
 
 var xScale = d3.scaleLog()
     .domain([1,datalen])
@@ -34,6 +36,8 @@ var xScale = d3.scaleLog()
 var yScale = d3.scaleLog()
     .domain([1,datalen*datalen])
     .range([height - padding, 0]);
+
+
 
 var xAxis = d3.axisBottom().scale(xScale).ticks(5);
 
@@ -56,8 +60,8 @@ svg.append("g")
     var grid = d3.select("#grid")
         .append("svg")
         .attr("id", "svgx")
-        .attr("width","80%")
-        .attr("height","540px");
+        .attr("width","700px")
+        .attr("height","550px");
 
         d3.select("#svgx").append("rect")
         .attr("class","fraccalc")
@@ -209,40 +213,40 @@ svg.append("g")
     .enter().append("rect")
     .attr("class","legend")
     .attr("x", legendax)
-    .attr("width", ss)
-    .attr("y", function(d,i){console.log("Hi"); return sy + (ss + marge) * i})
-    .attr("height", ss)
+    .attr("width", ss*5)
+    .attr("y", function(d,i){console.log("Hi"); return sy + (ss + marge)*5 * i})
+    .attr("height", ss*5)
     .attr("fill", function(d,i){if(i==0){return "green"}else if(i == 1){return "red"}else if(i==2){return "grey"}else if(i==3){return "blue"}else{return "pink"}})
 
     d3.select("#svgx").selectAll("text").data(["Vacant", "House","Industry","Commerce"])
     .enter().append("text")
-    .attr("x", legendax + 2*ss)
-    .attr("y", function(d,i){console.log("Hi"); return sy + ss/2 + (ss + marge) * i})
+    .attr("x", legendax + 2*ss*4)
+    .attr("y", function(d,i){console.log("Hi"); return sy + ss*4 + (ss + marge)*5 * i})
     .text(function(d){return d})
-    .style("font-size", ss + "px")
+    .style("font-size", ss*5 + "px")
 
     console.log(Object.keys(json).length)
 
     var slider = d3Slider.sliderHorizontal()
       .domain([0,Object.keys(json).length])
-      .width(300)
-      .tickFormat(d3.format('.0'))
+      .width(200)
+      .tickFormat(d3.format(''))
       .ticks(5)
       .default(0)
       .on('onchange', val => {
         updateColors(Math.round(val))});
 
 
-    var g = d3.select("div#value").append("svg")
-      .attr("width", 500)
+    var g = d3.select("div#value1").append("svg")
+      .attr("width", 300)
       .attr("height", 100)
       .append("g")
       .attr("transform", "translate(30,30)");
 
      var slider2 = d3Slider.sliderHorizontal()
         .domain([0,datalen/2])
-        .width(300)
-        .tickFormat(d3.format('.0'))
+        .width(200)
+        .tickFormat(d3.format(''))
         .ticks(5)
         .default(10)
         .on('onchange', val => {console.log(typeof val);
@@ -250,11 +254,11 @@ svg.append("g")
 
     g.call(slider);
 
-    var g = d3.select("div#value").append("svg")
-      .attr("width", 500)
+    var g = d3.select("div#value2").append("svg")
+      .attr("width", 300)
       .attr("height", 100)
       .append("g")
-      .attr("transform", "translate(30,30)");
+      .attr("transform", "translate(60,30)");
 
     g.call(slider2)
 
