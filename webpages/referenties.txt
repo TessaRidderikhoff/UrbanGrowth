@@ -1,0 +1,4 @@
+<h1>References</h1>
+<p>Anas A, Arnott R, Small K A, 1998, ''Urban spatial structure'' <em>Journal of Economic Literature</em> <strong>36</strong> 1426-1464</p>
+<p>Veneri, P. (2013), &ldquo;On City Size Distribution: Evidence from OECD Functional Urban Areas&rdquo;, <em>OECD Regional Development Working Papers</em>, 2013/27, OECD Publishing, Paris. <a href="http://dx.doi.org/10.1787/5k3tt100wf7j-en">http://dx.doi.org/10.1787/5k3tt100wf7j-en</a></p>
+<p>White R, Engelen G, 1993, "Cellular automata and fractal urban form: a cellular modelling approach to the evolution of urban land-use patterns" <em>Environment and Planning A</em> <strong>25</strong> 1175-1199</p>
