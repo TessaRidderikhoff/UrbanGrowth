@@ -1,4 +1,4 @@
-$.getJSON("rivergrid.json", function(json) {
+$.getJSON("river_results.json", function(json) {
     console.log(Object.keys(json).length)
 
     datalen = 50
