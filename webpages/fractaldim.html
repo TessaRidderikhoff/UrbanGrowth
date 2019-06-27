@@ -1,0 +1,25 @@
+<h1><strong>Fractal dimension</strong></h1>
+<p>The fractal dimension is a measure for the degree of complexity. It is the ratio of the change in detail in a pattern to the change in scale. It can be estimated using the following equation:</p>
+<table border="0" cellspacing="0" align="center">
+<tbody>
+<tr>
+<td align="center" nowrap="nowrap">lg<em>B<sub>t</sub></em>=<em>c+D</em>lg<em>r</em></td>
+</tr>
+</tbody>
+</table>
+<p>In this equation&nbsp;<em>D</em> is the fractal dimension, <em>c</em> a constant and <em>B<sub>t</sub> </em>is the total number of occupied cells within an area with a radius <em>r</em>. To determine the fractal dimension of a city, the total urbanized area within a given radius of the centre is calculated for several radii of increasing length. Then, regression analysis can be applied. The slope of the fitted linear line plot is equal to the fractal dimension.</p>
+<p>The fractal dimensions are a common method of analysis, as they are known to be an important characteristic of city structures. On average, based on cities around the world, values around 1.7 were found (Batty &amp; Longley (2012), Alfasi &amp; Portugali (2004)).&nbsp;</p>
+<p>When analysing our generated cities, we calculated an average fractal dimension of&nbsp;1.74 (based on 20 simulations). In comparison, when completely random 'cities' are generated, this results in an average fractal dimension of&nbsp;2.02.&nbsp;&nbsp;</p>
+<p><img src="../fractalsignificance.png" alt="The average fractal dimension of a random matrix versus the average fractal dimension of generated cities. The averages are based on 20 simulations. A p-value of 3.31e-19 was found. The standard deviation is depicted as well." /></p>
+<p>As can be seen, comparing the generated cities to randomly generated matrices leads to a significant difference. The similarity between the world-wide determined average&nbsp;fractal dimension and our generated cities, as well as the small standard deviation of the fractal dimension calculation, suggests a certain validity of our model.</p>
+<p>To further investigate this, we examined the fractal growth over time of our model.</p>
+<p><img src="../fractalgrowth.png" alt="The growth of the fractal dimension over time of 5 generated cities. The fractal dimension of random matrices are depicted as well, as well as a line of the worldwide average fractal dimension. " /></p>
+<p>This suggests that although starting configurations may differ in fractal dimension (due to the larger stochastic impact during the first period of the simulation), after 25 simulation steps the fractal dimensions are quite similar and close to the worldwide average fractal dimension. In comparison, randomly generated matrices consistently have a fractal dimension of around 2. It should be noted that this figure consists of a random matrix at each step, and do not evolve during the steps.&nbsp;</p>
+<p>Additionally, we can compare the fractal growth of our model to the fractal growth of existing cities. We compared data of Tel Aviv (Benguigui <em>et al.</em>, 2000), Beijing (Chen &amp; Wang, 2013) and London (Chen, 2016). Since these datasets varied in time period and interval, we determined the average growth per year of each city. This was compared to the fractal growth of our own model.</p>
+<p><img src="../fractalgrowthcities.png" alt="The average growth of Tel Aviv, Beijing, London and a simulated city using our model, starting from the same starting fractal dimension." /></p>
+<p>In this comparison, a simulation step in our model represents seven years. As can be seen, the fractal growth of our model compared to the growth of actual cities is rather similar. This also implies validity of the fractal dimension of our model.&nbsp;</p>
+<p>Alfasi, N. &amp; Portugali, J. <cite>Planning just-in-time versus planning just-in-case</cite>. <em>Cities</em> <strong>21</strong>, 29&ndash;39 (2004).</p>
+<p>Batty, M. &amp; Longley, P. <em>Fractal cities: a geometry of form and function</em>. (Academic Press, 1994).</p>
+<p>Benguigui, L., Czamanski, D., Marinov, M., &amp; Portugali, Y. (2000). When and where is a city fractal?.&nbsp;<em>Environment and planning B: Planning and design</em>,&nbsp;<em>27</em>(4), 507-519.</p>
+<p>Chen, Y., &amp; Wang, J. (2013). Multifractal characterization of urban form and growth: the case of Beijing.&nbsp;<em>Environment and Planning B: Planning and Design</em>,&nbsp;<em>40</em>(5), 884-904.</p>
+<p>Chen, Y. (2016). Logistic Models of Fractal Dimension Growth for Spatio-Temporal Dynamics of Urban Morphology.&nbsp;<em>arXiv preprint arXiv:1606.03538</em>.</p>
