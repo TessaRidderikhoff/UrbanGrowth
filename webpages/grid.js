@@ -56,6 +56,7 @@ svg.append("g")
     var grid = d3.select("#grid")
         .append("svg")
         .attr("id", "svgx")
+        .attr("fill-opacity", 0)
         .attr("width","80%")
         .attr("height","1040px");
 
