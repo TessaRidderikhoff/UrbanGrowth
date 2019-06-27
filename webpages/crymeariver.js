@@ -26,7 +26,7 @@ padding = 50
         .append("svg")
         .attr("id", "svgx")
         .attr("width","80%")
-        .attr("height","1040px");
+        .attr("height","600px");
 
         d3.select("#svgx").append("rect")
         .attr("class","fraccalc")
