@@ -317,7 +317,6 @@ d3.select("#svgx4").selectAll("text").data(["Vacant", "House","Industry","Commer
         .transition()
         .duration(1000)
         .attr("opacity", 0.7)
-//         .delay()
         .on("end", function(d){console.log(i); if (i < datalen){repeat()}})
         }
         repeat(i)
