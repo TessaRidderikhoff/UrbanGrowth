@@ -53,6 +53,8 @@ svg.append("g")
             .attr("class", "label")
             .attr("x", width)
             .attr("y", -6)
+            .attr("fill", "black")
+            .style("font-size","11px")
             .style("text-anchor", "middle")
             .text("Radius");
 
@@ -66,7 +68,9 @@ svg.append("g")
       .attr("transform", "rotate(-90)")
       .attr("y", 6)
       .attr("dy", ".71em")
+    .attr("fill","black")
       .style("text-anchor", "middle")
+       .style("font-size","11px")
       .text("Number of fractal elements");;
 
 
