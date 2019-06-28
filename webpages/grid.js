@@ -297,7 +297,7 @@ svg.append("g")
         .transition()
         .duration(2000)
         .attr("opacity", 0.7)
-        .on("end", function(d){console.log(i); if (i < datalen){repeat()}})
+        .on("end", function(d){console.log(i); if (i < 25){repeat()}})
         }
         repeat(i)
     });
