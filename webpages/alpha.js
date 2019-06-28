@@ -94,17 +94,17 @@ padding = 50
     .enter().append("rect")
     .attr("class","legend")
     .attr("x", legendax)
-    .attr("width", ss)
-    .attr("y", function(d,i){console.log("Hi"); return sy + (ss + marge) * i})
-    .attr("height", ss)
+    .attr("width", ss*2)
+    .attr("y", function(d,i){console.log("Hi"); return sy + (ss + marge)*2 * i})
+    .attr("height", ss*2)
     .attr("fill", function(d,i){if(i==0){return "green"}else if(i == 1){return "red"}else if(i==2){return "grey"}else if(i==3){return "blue"}else{return "pink"}})
 
     d3.select("#svgx").selectAll("text").data(["Vacant", "House","Industry","Commerce"])
     .enter().append("text")
-    .attr("x", legendax + 2*ss)
-    .attr("y", function(d,i){console.log("Hi"); return sy + ss/2 + (ss + marge) * i})
+    .attr("x", legendax + 2*ss*2)
+    .attr("y", function(d,i){console.log("Hi"); return sy + ss*1.8 + (ss + marge)*2 * i})
     .text(function(d){return d})
-    .style("font-size", ss + "px")
+    .style("font-size", ss*2 + "px")
 
     console.log(Object.keys(json).length)
 
@@ -155,17 +155,17 @@ d3.select("#svgx2").selectAll(".legend").data(["Vacant", "House","Industry","Com
 .enter().append("rect")
 .attr("class","legend")
 .attr("x", legendax)
-.attr("width", ss)
-.attr("y", function(d,i){console.log("Hi"); return sy + (ss + marge) * i})
-.attr("height", ss)
+.attr("width", ss*2)
+.attr("y", function(d,i){console.log("Hi"); return sy + (ss + marge)*2 * i})
+.attr("height", ss*2)
 .attr("fill", function(d,i){if(i==0){return "green"}else if(i == 1){return "red"}else if(i==2){return "grey"}else if(i==3){return "blue"}else{return "pink"}})
 
 d3.select("#svgx2").selectAll("text").data(["Vacant", "House","Industry","Commerce"])
 .enter().append("text")
-.attr("x", legendax + 2*ss)
-.attr("y", function(d,i){console.log("Hi"); return sy + ss/2 + (ss + marge) * i})
+.attr("x", legendax + 2*ss*2)
+.attr("y", function(d,i){console.log("Hi"); return sy + ss*1.8 + (ss + marge)*2 * i})
 .text(function(d){return d})
-.style("font-size", ss + "px")
+.style("font-size", ss*2 + "px")
 
 
 ///////////////////////////////////////////////////////////////////////////////////////
@@ -200,17 +200,17 @@ d3.select("#svgx3").selectAll(".legend").data(["Vacant", "House","Industry","Com
 .enter().append("rect")
 .attr("class","legend")
 .attr("x", legendax)
-.attr("width", ss)
-.attr("y", function(d,i){console.log("Hi"); return sy + (ss + marge) * i})
-.attr("height", ss)
+.attr("width", ss*2)
+.attr("y", function(d,i){console.log("Hi"); return sy + (ss + marge)*2 * i})
+.attr("height", ss*2)
 .attr("fill", function(d,i){if(i==0){return "green"}else if(i == 1){return "red"}else if(i==2){return "grey"}else if(i==3){return "blue"}else{return "pink"}})
 
 d3.select("#svgx3").selectAll("text").data(["Vacant", "House","Industry","Commerce"])
 .enter().append("text")
-.attr("x", legendax + 2*ss)
-.attr("y", function(d,i){console.log("Hi"); return sy + ss/2 + (ss + marge) * i})
+.attr("x", legendax + 2*ss*2)
+.attr("y", function(d,i){console.log("Hi"); return sy + ss*1.8 + (ss + marge)*2 * i})
 .text(function(d){return d})
-.style("font-size", ss + "px")
+.style("font-size", ss*2 + "px")
 
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -244,23 +244,23 @@ d3.select("#svgx4").selectAll(".legend").data(["Vacant", "House","Industry","Com
 .enter().append("rect")
 .attr("class","legend")
 .attr("x", legendax)
-.attr("width", ss)
-.attr("y", function(d,i){console.log("Hi"); return sy + (ss + marge) * i})
-.attr("height", ss)
+.attr("width", ss*2)
+.attr("y", function(d,i){console.log("Hi"); return sy + (ss + marge)*2 * i})
+.attr("height", ss*2)
 .attr("fill", function(d,i){if(i==0){return "green"}else if(i == 1){return "red"}else if(i==2){return "grey"}else if(i==3){return "blue"}else{return "pink"}})
 
 d3.select("#svgx4").selectAll("text").data(["Vacant", "House","Industry","Commerce"])
 .enter().append("text")
-.attr("x", legendax + 2*ss)
-.attr("y", function(d,i){console.log("Hi"); return sy + ss/2 + (ss + marge) * i})
+.attr("x", legendax + 2*ss*2)
+.attr("y", function(d,i){console.log("Hi"); return sy + ss*1.8 + (ss + marge)*2 * i})
 .text(function(d){return d})
-.style("font-size", ss + "px")
+.style("font-size", ss*2 + "px")
 
 
 //////////////////////////////////////////////////////////////////////////////////////
-    d3.select("rect").attr("id", "time")
+    d3.selectAll("rect").attr("id", "time")
 
-    d3.select("#time").on("click", function(d){
+    d3.selectAll("#time").on("click", function(d){
         i = 0
         console.log("start")
 
@@ -315,8 +315,9 @@ d3.select("#svgx4").selectAll("text").data(["Vacant", "House","Industry","Commer
 
         d3.select("#svgx").select("rect")
         .transition()
-        .duration(2000)
+        .duration(1000)
         .attr("opacity", 0.7)
+        .delay()
         .on("end", function(d){console.log(i); if (i < datalen){repeat()}})
         }
         repeat(i)

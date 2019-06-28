@@ -48,13 +48,26 @@ var scatdict = new Set
 svg.append("g")
         .attr("class", "x axis")
         .attr("transform", "translate(0," + (height - padding) + ")")
-        .call(xAxis);
+        .call(xAxis)
+        .append("text")
+            .attr("class", "label")
+            .attr("x", width)
+            .attr("y", -6)
+            .style("text-anchor", "end")
+            .text("Radius");
 
     //y axis
     svg.append("g")
         .attr("class", "y axis")
         .attr("transform", "translate(" + padding + ", 0)")
-        .call(yAxis);
+        .call(yAxis)
+        .append("text")
+      .attr("class", "label")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 6)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text("Number of fractal elements");;
 
 
     var grid = d3.select("#grid")
