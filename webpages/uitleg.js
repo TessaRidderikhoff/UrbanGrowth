@@ -187,7 +187,7 @@ var grid = d3.select("#svgx")
 
 
 
-    var g = d3.select("body").append("svg")
+    var g = d3.select("#svgx").append("svg")
       .attr("width", 500)
       .attr("height", 100)
       .append("g")
