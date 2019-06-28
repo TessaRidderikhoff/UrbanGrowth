@@ -295,8 +295,9 @@ svg.append("g")
 
         d3.select("#svgx").select("rect")
         .transition()
-        .duration(2000)
+        .duration(1000)
         .attr("opacity", 0.7)
+         .delay(200)
         .on("end", function(d){console.log(i); if (i < 25){repeat()}})
         }
         repeat(i)
