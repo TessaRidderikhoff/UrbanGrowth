@@ -2,7 +2,7 @@ $.getJSON("gridx100.json", function(json) {
     console.log(Object.keys(json).length)
 
     datalen = 100
-    ss = 3
+    ss = 4
     sx = 50
     sy = 50
 
